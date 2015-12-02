@@ -1,0 +1,336 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta name="Author" lang="ua" content="Гаштемеленко Яваскриптик Перлович">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta name="Description" content="Приклад Web - сторiнки, Web Developer's Handbook. HTML Reference.">
+    <meta name="Keywords" content="Web - сторiнка, новини, компанія ">
+    <title>Приклад. Форми.
+    </title>
+
+    <script language="JavaScript">
+        function fnd1()
+        {
+            document.frmfnd.txta1.value="";
+            var result;
+            str=document.frmfnd.txtf1.value;
+            mask=new RegExp("0|1|2|3|4|5|6|7|8|9","g");
+            result=str.match(mask);
+            document.frmfnd.txta1.value=(result.length);
+        }
+        function fnd2()
+        {
+            document.frmfnd.txta2.value="";
+            var result;
+            str=document.frmfnd.txtf2.value;
+            mask=new RegExp("k[a-z]*o","g");
+            result=str.match(mask);
+            document.frmfnd.txta2.value=(result);
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Times New Roman';
+            max-width: 600px;
+            padding: 0px 30px;
+            text-shadow: 0.2em 0.3em
+        caption-side: bottom;
+            content: close-quote;
+            list-style-type: upper-alpha;
+            page-break-before: always;
+
+
+        }
+        h1 {
+            margin-bottom: 0px;
+            font-family: 'Traktir-Modern';
+            max-width: 600px;
+            padding: 0px 30px;
+            text-shadow: 0.2em 0.3em
+        caption-side: bottom;
+            content: close-quote;
+            list-style-type: upper-alpha;
+            page-break-before: always;
+        }
+        p {
+            margin-top: 0px;
+            font-family: 'Rockletter Simple';
+            max-width: 600px;
+            padding: 0px 30px;
+            text-shadow: 0.2em 0.3em
+        caption-side: bottom;
+            content: close-quote;
+            list-style-type: upper-alpha;
+            page-break-before: always;
+        }
+        fieldset {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-family: 'Arthur Gothic';
+            max-width: 600px;
+            padding: 0px 30px;
+            text-shadow: 0.2em 0.3em
+        caption-side: bottom;
+            content: close-quote;
+            list-style-type: upper-alpha;
+            page-break-before: always;
+        }
+        legend {
+            padding: 0px 3px;
+            font-weight: bold;
+            font-variant: small-caps;
+            font-family: 'Drakkar';
+            max-width: 600px;
+            padding: 0px 30px;
+            text-shadow: 0.2em 0.3em
+        caption-side: bottom;
+            content: close-quote;
+            list-style-type: upper-alpha;
+            page-break-before: always;
+        }
+        label {
+            width: 150px;
+            display: inline-block;
+            vertical-align: top;
+            margin: 6px;
+            font-family: 'Flibustier Thin';
+            max-width: 600px;
+            padding: 0px 30px;
+            text-shadow: 0.2em 0.3em
+        caption-side: bottom;
+            content: close-quote;
+            list-style-type: upper-alpha;
+            page-break-before: always;
+        }
+        em {
+            font-weight: bold;
+            font-style: normal;
+            color: #f00;
+            font-family: 'Flibustier Thin';
+            max-width: 600px;
+            padding: 0px 30px;
+            text-shadow: 0.2em 0.3em
+        caption-side: bottom;
+            content: close-quote;
+            list-style-type: upper-alpha;
+            page-break-before: always;
+        }
+        input, textarea {
+            width: 249px;
+            font-family: 'Flibustier Thin';
+            max-width: 600px;
+            padding: 0px 30px;
+            text-shadow: 0.2em 0.3em
+        caption-side: bottom;
+            content: close-quote;
+            list-style-type: upper-alpha;
+            page-break-before: always;
+        }
+        textarea {
+            height: 100px;
+            font-family: 'Cordeballet';
+            max-width: 600px;
+            padding: 0px 30px;
+            text-shadow: 0.2em 0.3em
+        caption-side: bottom;
+            content: close-quote;
+            list-style-type: upper-alpha;
+            page-break-before: always;
+        }
+        select {
+            width: 254px;
+            font-family: 'Cordeballet';
+            max-width: 600px;
+            padding: 0px 30px;
+            text-shadow: 0.2em 0.3em
+        caption-side: bottom;
+            content: close-quote;
+            list-style-type: upper-alpha;
+            page-break-before: always;
+        }
+        input[type=checkbox] {
+            width: 10px;
+            font-family: 'Cordeballet';
+            max-width: 600px;
+            padding: 0px 30px;
+            text-shadow: 0.2em 0.3em
+        caption-side: bottom;
+            content: close-quote;
+            list-style-type: upper-alpha;
+            page-break-before: always;
+        }
+        input[type=submit] {
+            width: 170px;
+            padding: 10px;
+            font-family: 'Cordeballet';
+            max-width: 600px;
+            padding: 0px 30px;
+            text-shadow: 0.2em 0.3em
+        caption-side: bottom;
+            content: close-quote;
+            list-style-type: upper-alpha;
+            page-break-before: always;
+        }
+        input:focus {
+            background: #eaeaea;
+            font-family: 'Cordeballet';
+            max-width: 600px;
+            padding: 0px 30px;
+            text-shadow: 0.2em 0.3em
+        caption-side: bottom;
+            content: close-quote;
+            list-style-type: upper-alpha;
+            page-break-before: always;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+<form action="#" novalidate>
+    <center><p><i><font color="#8b0000" size="10">Заповніть форму. Обов'язкові поля помічені </font></i><em>*</em></p></center>
+    <font color="navy"><fieldset>
+        <legend>Контактна інформація користувача</legend>
+        <label for="name">Ім'я <em>*</em></label>
+        <input id="name" placeholder = "Богдан Костянтинович" autofocus required><br>
+        <label for="telephone">Телефон</label>
+        <input type = "tel" id="telephone" placeholder = " +38 0xx xxx xxxx" ><br>
+        <label for="email">Email <em>*</em></label>
+        <input id="email" placeholder = "ps_t@ukr.net" pattern="\S+@[a-z]+.[a-z]+" required><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Персональна інформація</legend>
+        <label for="age">Вік<em>*</em></label>
+        <input type="number" min="18" max="120" step="1" value = 21 placeholder =21><br>
+        <label for="gender">Стать</label>
+        <select id="gender">
+            <option value="male">Чоловік</option>
+            <option value="female">Жінка</option>
+        </select><br>
+        <label for="zp">Заробітня плата</label>
+        <input id="zp" type="range" min="1000" max="12000" step="10" value =5000><br>
+        <label for="comments">Перерахуйте особисті якості </label>
+        <textarea id="comments" placeholder = "спокійний, щедрий, ввічливий, добрий, ........"></textarea>
+        <br>
+        <label for="date_n">Дата народження<em>*</em></label>
+        <input id="date_n" type="date" min="1920-01-01" max="2010-01-01"><br>
+        <br>
+        <label for="addr_n">Адреса вашої Веб-сторінки</label>
+        <input id="addr_n" type="url" placeholder ="http://hjp.cs.chnu.cv.ua" ><br>
+    </fieldset>
+
+        <fieldset>
+        <legend>Виберіть вашу любиму марку автівки </legend>
+        <label for="MercedesBenz"><input id="MercedesBenz" type="checkbox"> Мерседес</label>
+        <label for="Audi"><input id="Audi" type="checkbox"> Ауди</label>
+        <label for="Skoda"><input id="Skoda" type="checkbox"> Шкода</label>
+        <label for="Lada"><input id="Lada" type="checkbox"> Лада</label>
+        <label for="Ford"><input id="Ford" type="checkbox"> Форд</label>
+        <label for="BMW"><input id="BMW" type="checkbox"> БМВ</label>
+        <label for="Bently"><input id="Bently" type="checkbox"> Бентлі</label>
+        <label for="Renault"><input id="Renault" type="checkbox"> Рено</label>
+    </fieldset>
+
+        <fieldset>
+        <datalist id="dl_fruits">
+            <select id="favoriteFruite">
+                <option value ="Яблоко" label="apple">
+                <option value="Ананас" label="ananas">
+                <option value="Абрикос" label="apricot">
+                <option value="Кавун" label="watermelon">
+                <option value="Авокадо" label="avocado">
+                <option value="Апельсин" label="Orange">
+            </select>
+        </datalist>
+        <legend>Виберіть Ваш </legend>
+        <label for="mycolor">любимий колір</label>
+        <input id="mycolor" type="color" value = "#00ff00"><br>
+        <label for="fruit">фрукт</label> <input id="fruit" list="dl_fruits" placeholder = "Кавун" >
+    </fieldset>
+    Заповнення анкети: <progress min =100 max="200"> Анкета заповняється...</progress>
+    <br>
+    <p><input type="submit" value="Відправити інформацію"></p>
+    <fieldset>
+        <legend>Віджети </legend>
+        <br>
+        <label for="date_tm">Дата, час </label>
+        <input id="date_tm" name ="date_tm" type="datetime" ><br>
+        <label for="date_tml">Місцевий час </label>
+        <input id="date_tml" name ="date_tml" type="datetime-local" ><br>
+        <label for="date_month">Місяць </label>
+        <input id="date_month" name ="date_month" type="month" ><br>
+        <label for="date_time">Час </label>
+        <input id="date_time" name ="date_time" type="time" ><br>
+        <label for="date_week">Тиждень </label>
+        <input id="date_week" name ="date_week" type="week" ><br>
+    </fieldset></font>
+
+</form>
+
+<form action="handler.php"
+      enctype="multipart/form-data" method="post">
+    <p>Ви можете загрузити, свої дані через файл, і своєю аватаркою</p>
+    <p><input type="file" name="pic"></p>
+</form>
+
+Ваш багаж важить: <meter min="5" max="70" value="28">28 кілограм</meter><br>
+Ваш багаж важить: <meter min="5" max="220" high="10" >...кілограм</meter><br>
+Ваш багаж важить: <meter min="5" max="100" high="70" value="79">79 кілограм</meter>*
+<p><small>* За багаж вагою більше 70 кг. треба доплатити.</small></p>
+Виконання оплати <meter value="0.75">75%</meter> <br>
+
+Заборгованість фірмі :
+<meter max = "100" low = "10" high = "60" value = "5"> Низька </meter>
+<meter max = "100" low = "10" high = "60" value = "30"> Нормальна </meter>
+<meter max = "100" low = "10" high = "60" value = "40"> Нормальна </meter>
+<meter max = "100" low = "10" high = "60" value = "50"> Нормальна </meter>
+<meter max = "100" low = "10" high = "60" value = "80"> Висока </meter>
+    <meter max = "100" low = "10" high = "60" value = "100"> Ультро висока </meter>
+<br>
+
+<form id="frm_img" name="frm_img" method="get" action="">
+    <fieldset>
+        <legend>Карта знаходження фірми</legend>
+        <br>
+        <img src="maps.png" usemap="#shapes"
+         alt="fffffffffffffffffffffffffffffff"
+star.">
+        <map name="shapes">
+            <area shape=rect coords="50,50,100,100"> <!-- the hole in the red box -->
+            <area shape=rect coords="25,25,125,125" href="red.html" alt="Red box.">
+            <area shape=circle coords="200,75,50" href="green.html" alt="Green circle.">
+            <area shape=poly coords="325,25,262,125,388,125" href="blue.html" alt="Blue triangle.">
+            <area shape=poly coords="450,25,435,60,400,75,435,90,450,125,465,90,500,75,465,60"
+                  href="yellow.html" alt="Yellow star.">
+        </map>
+    </fieldset>
+</form>
+<h1 align="center">Пошук</h1>
+<form id="frmfnd" name="frmfnd" method="post" action="">
+    <p align="left">Введіть текст:</p>
+    <input name="txtf1" type="text" size="85%"/>
+    <p align="left">Результат: кількість цифр</p>
+    <p>
+        <input name="txta1" type="text" size="85%"/>
+    </p>
+    <p align="left">
+        <input name="btn1" type="button" onclick="javascript:fnd1()" value="Пошук" />
+    </p>
+    <hr>
+    <input type="submit" value="Очистити форму">
+    <hr color='yellow'>
+    <p align="left">Введіть текст:</p>
+    <input name="txtf2" type="text" size="85%"/>
+    <p align="left">Результат: слова що починаються на k і закінчуються на о</p>
+    <p>
+        <input name="txta2" type="text" size="85%"/>
+    </p>
+    <p align="left">
+        <input name="btn2" type="button" onclick="javascript:fnd2()" value="Пошук" />
+    </p>
+</form>
+</body>
+</html>
