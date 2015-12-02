@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="Author" lang="ua" content="Гаштемеленко Яваскриптик Перлович">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="Description" content="Приклади Web – сторiнок. HTML Reference.">
+<meta name="Keywords" content="Web - сторiнка, audio video ">
+<title>Приклад. Сторінка audio та video </title>
+<script>
+function set_arec()
+{
+var by_sel=document.getElementById("issel");
+var my_a=document.getElementById("mypl");
+var my_v=document.getElementById("myVideo1");
+my_a.src ="audio/"+by_sel.value;
+my_a.play();
+my_v. pause();
+}
+function set_vrec()
+{
+2
+var by_sel=document.getElementById("is_v_sel");
+var my_a=document.getElementById("mypl");
+var my_v=document.getElementById("myVideo1");
+my_v.src ="video/"+by_sel.value;
+my_v.play();
+my_a. pause();
+}
+function checkVideo()
+{
+if(!!document.createElement('video').canPlayType)
+{
+var vidTest=document.createElement("video");
+oggTest=vidTest.canPlayType('video/ogg; codecs="theora, vorbis"');
+if (!oggTest)
+{
+h264Test=vidTest.canPlayType('video/mp4; codecs="avc1.42E01E, mp4a.40.2"');
+if (!h264Test)
+{
+document.getElementById("checkVideoResult").innerHTML="Вибачте. Не підтримує."
+}
+else
+{
+if (h264Test=="probably")
+{
+document.getElementById("checkVideoResult").innerHTML="Так!";
+}
+else
+{
+document.getElementById("checkVideoResult").innerHTML="Частково підтримує.";
+}
+}
+}
+else
+{
+if (oggTest=="probably")
+{
+document.getElementById("checkVideoResult").innerHTML="Так!";
+}
+else
+{
+document.getElementById("checkVideoResult").innerHTML="Частково підтримує.";
+}
+}
+}
+else
+{
+document.getElementById("checkVideoResult").innerHTML="Вибачте. Не підтримує."
+}
+}
+</script>
+
+
+</head>
+<body >
+<h2> Лабораторна робота №11. Приклад. </h2>
+<br>
+<div>
+<h3> Приклад. Бібліотека audio</h3>
+<form >
+<select id = "issel" onchange ="set_arec()">
+<option value="HZ DIC.mp3" selected> Dreaming is collapsing </option>
+<option value="TFK.mp3"> Cortsey call </option>
+<option value="NGD.mp3"> Not Gonna Die </option>
+<option value="IGNS.mp3"> I've got no Strings </option>
+<select>
+</form>
+<br>
+<audio id = "mypl" controls autoplay loop >
+no audio
+<source src="HZ DIC.mp3" type ="audio/mp3" >
+<source src="TFK.mp3" type ="audio/mp3" >
+<source src="NGD.mp3" type ="audio/mp3" >
+<source src="IGNS.mp3" type ="audio/mp3" >
+</audio>
+</div>
+3
+<hr>
+<div>
+<h3> Приклад. Бібліотека video</h3>
+<br>
+<form >
+<select id = "is_v_sel" onchange ="set_vrec()">
+<option value="test.mp4" selected> Captain America Civil War </option>
+<option value="test3.mp4"> Hary </option>
+<option value="test2.mp4"> What do yuo see </option>
+<option value="test4.mp4"> EE - I - EE - I-O </option>
+<option value="v_shkolu.webm"> Чебурашка </option>
+<select>
+</form>
+<br>
+<br>
+<iframe width="854" height="480" src="https://www.youtube.com/embed/43NWzay3W4s" frameborder="0" allowfullscreen></iframe>
+<br>
+</div>
+<br>
+<div>
+<h3> Приклад. Перевірка підтримки відео</h3>
+<div id="checkVideoResult">
+<button onclick="checkVideo()">Перевірка</button>
+</div>
+</div>
+</body>
+</html>
